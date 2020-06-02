@@ -24,3 +24,11 @@ class Block():
         for transaction in self.transactions:
             string += str(transaction) + separator
         return string
+
+    def is_double_spending(self, transaction):
+        for stored_transaction in self.transactions:
+            for stored_coin in stored_transaction.coins:
+                for coin in transaction.coins:
+                    if(coin.id == stored_coin.id):
+                        return True
+        return False
