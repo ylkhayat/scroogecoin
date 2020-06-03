@@ -1,0 +1,307 @@
+
+=======================================================
+BlockChain Augmented
+=======================================================
+BlockChain Content: 
+
+Block Content: 
+Previous Block Hash: None
+0. Transaction ID:	b"\x07\xc8\xa5\xe0#\xac\xadG\xaa6'e\xa39i\xe7\x15<\\\\\xd4\xf7\xe31\xc0\xee\xf9|z\x94\xe2\xef"
+Hash(Previous Transaction): b"\x07\xc8\xa5\xe0#\xac\xadG\xaa6'e\xa39i\xe7\x15<\\\\\xd4\xf7\xe31\xc0\xee\xf9|z\x94\xe2\xef"
+Amount: 10	Genre: create
+Coins: Coin 	0
+Property of	-1357121350476830314
+Coin 	1
+Property of	-1357121350476830314
+Coin 	2
+Property of	-1357121350476830314
+Coin 	3
+Property of	-1357121350476830314
+Coin 	4
+Property of	-1357121350476830314
+Coin 	5
+Property of	-1357121350476830314
+Coin 	6
+Property of	-1357121350476830314
+Coin 	7
+Property of	-1357121350476830314
+Coin 	8
+Property of	-1357121350476830314
+Coin 	9
+Property of	-1357121350476830314
+--------------------------------------------------
+1. Transaction ID:	b'\xf2\x1f+\x83\x8bA\xde\xcc\x19\x02\xf5\x86W\xc7\xebN\xdf!.\xc2\x0e\xe3z\x82\xb1q\xa5\x99E<\x7f\x13'
+Hash(Previous Transaction): b'\xf2\x1f+\x83\x8bA\xde\xcc\x19\x02\xf5\x86W\xc7\xebN\xdf!.\xc2\x0e\xe3z\x82\xb1q\xa5\x99E<\x7f\x13'
+Amount: 10	Genre: create
+Coins: Coin 	10
+Property of	-1357121350476830314
+Coin 	11
+Property of	-1357121350476830314
+Coin 	12
+Property of	-1357121350476830314
+Coin 	13
+Property of	-1357121350476830314
+Coin 	14
+Property of	-1357121350476830314
+Coin 	15
+Property of	-1357121350476830314
+Coin 	16
+Property of	-1357121350476830314
+Coin 	17
+Property of	-1357121350476830314
+Coin 	18
+Property of	-1357121350476830314
+Coin 	19
+Property of	-1357121350476830314
+--------------------------------------------------
+2. Transaction ID:	b'\xa2\x06\xb1x\xa5\x13~\x96\xb8\xaa\x80\xca\x9f\xf4{M\x84\x80"^\xfc\xce\xba7\x16\xfa\xb7\xc6\xdcv\xa6\xb0'
+Hash(Previous Transaction): b'\xa2\x06\xb1x\xa5\x13~\x96\xb8\xaa\x80\xca\x9f\xf4{M\x84\x80"^\xfc\xce\xba7\x16\xfa\xb7\xc6\xdcv\xa6\xb0'
+Amount: 10	Genre: create
+Coins: Coin 	20
+Property of	-1357121350476830314
+Coin 	21
+Property of	-1357121350476830314
+Coin 	22
+Property of	-1357121350476830314
+Coin 	23
+Property of	-1357121350476830314
+Coin 	24
+Property of	-1357121350476830314
+Coin 	25
+Property of	-1357121350476830314
+Coin 	26
+Property of	-1357121350476830314
+Coin 	27
+Property of	-1357121350476830314
+Coin 	28
+Property of	-1357121350476830314
+Coin 	29
+Property of	-1357121350476830314
+--------------------------------------------------
+3. Transaction ID:	b'0M3\xf5\x1c^T3\xdc\xac\x9cd4\xd3/\xc3z\xf8\xfd\xab\xae\xfa\x1e"sG\xbf\xac\xcd\xa6\x88:'
+Hash(Previous Transaction): b'0M3\xf5\x1c^T3\xdc\xac\x9cd4\xd3/\xc3z\xf8\xfd\xab\xae\xfa\x1e"sG\xbf\xac\xcd\xa6\x88:'
+Amount: 10	Genre: create
+Coins: Coin 	30
+Property of	-1357121350476830314
+Coin 	31
+Property of	-1357121350476830314
+Coin 	32
+Property of	-1357121350476830314
+Coin 	33
+Property of	-1357121350476830314
+Coin 	34
+Property of	-1357121350476830314
+Coin 	35
+Property of	-1357121350476830314
+Coin 	36
+Property of	-1357121350476830314
+Coin 	37
+Property of	-1357121350476830314
+Coin 	38
+Property of	-1357121350476830314
+Coin 	39
+Property of	-1357121350476830314
+--------------------------------------------------
+4. Transaction ID:	b'}=\xa5\x19h\xe9\x7fg\xdccs\xd0\xc4B\xbd\xd6-\x80S\x0e\x83\x18\xd7\xf9]\xe8\xdd\xaahP\xa6h'
+Hash(Previous Transaction): b'}=\xa5\x19h\xe9\x7fg\xdccs\xd0\xc4B\xbd\xd6-\x80S\x0e\x83\x18\xd7\xf9]\xe8\xdd\xaahP\xa6h'
+Amount: 10	Genre: create
+Coins: Coin 	40
+Property of	-1357121350476830314
+Coin 	41
+Property of	-1357121350476830314
+Coin 	42
+Property of	-1357121350476830314
+Coin 	43
+Property of	-1357121350476830314
+Coin 	44
+Property of	-1357121350476830314
+Coin 	45
+Property of	-1357121350476830314
+Coin 	46
+Property of	-1357121350476830314
+Coin 	47
+Property of	-1357121350476830314
+Coin 	48
+Property of	-1357121350476830314
+Coin 	49
+Property of	-1357121350476830314
+--------------------------------------------------
+5. Transaction ID:	b'\xf5\x87\x184g\xb7S|\xdb$\xd38\xe0=\xf9e\xb5<Z\x19\xdfh\x9dY\xf89\x00\xca\x9eu2R'
+Hash(Previous Transaction): b'\xf5\x87\x184g\xb7S|\xdb$\xd38\xe0=\xf9e\xb5<Z\x19\xdfh\x9dY\xf89\x00\xca\x9eu2R'
+Amount: 10	Genre: create
+Coins: Coin 	50
+Property of	-1357121350476830314
+Coin 	51
+Property of	-1357121350476830314
+Coin 	52
+Property of	-1357121350476830314
+Coin 	53
+Property of	-1357121350476830314
+Coin 	54
+Property of	-1357121350476830314
+Coin 	55
+Property of	-1357121350476830314
+Coin 	56
+Property of	-1357121350476830314
+Coin 	57
+Property of	-1357121350476830314
+Coin 	58
+Property of	-1357121350476830314
+Coin 	59
+Property of	-1357121350476830314
+--------------------------------------------------
+6. Transaction ID:	b"\x00\xc0'N.N:\xcf\xc0\x83\xb1g'\xd59\x8cM\x8f\xb0t\xf82\xc3\xe3\xe3\xc5$\x1cy& \xaf"
+Hash(Previous Transaction): b"\x00\xc0'N.N:\xcf\xc0\x83\xb1g'\xd59\x8cM\x8f\xb0t\xf82\xc3\xe3\xe3\xc5$\x1cy& \xaf"
+Amount: 10	Genre: create
+Coins: Coin 	60
+Property of	-1357121350476830314
+Coin 	61
+Property of	-1357121350476830314
+Coin 	62
+Property of	-1357121350476830314
+Coin 	63
+Property of	-1357121350476830314
+Coin 	64
+Property of	-1357121350476830314
+Coin 	65
+Property of	-1357121350476830314
+Coin 	66
+Property of	-1357121350476830314
+Coin 	67
+Property of	-1357121350476830314
+Coin 	68
+Property of	-1357121350476830314
+Coin 	69
+Property of	-1357121350476830314
+--------------------------------------------------
+7. Transaction ID:	b'g\xb4\x81a\xf6\xe7\xd8\xce\x86\xe5@\xaevR7\x0b\xea\x91\x1c\xe8k\x87\xadF\xcd\xef\x8d;\x05\xa4\xf8\x14'
+Hash(Previous Transaction): b'g\xb4\x81a\xf6\xe7\xd8\xce\x86\xe5@\xaevR7\x0b\xea\x91\x1c\xe8k\x87\xadF\xcd\xef\x8d;\x05\xa4\xf8\x14'
+Amount: 10	Genre: create
+Coins: Coin 	70
+Property of	-1357121350476830314
+Coin 	71
+Property of	-1357121350476830314
+Coin 	72
+Property of	-1357121350476830314
+Coin 	73
+Property of	-1357121350476830314
+Coin 	74
+Property of	-1357121350476830314
+Coin 	75
+Property of	-1357121350476830314
+Coin 	76
+Property of	-1357121350476830314
+Coin 	77
+Property of	-1357121350476830314
+Coin 	78
+Property of	-1357121350476830314
+Coin 	79
+Property of	-1357121350476830314
+--------------------------------------------------
+8. Transaction ID:	b'\xe8\x00\xda\xea!%\x95\xd3?\xaeA-\xde\xe0\x85\xf9\xbd\xbcr\x0c\xb7\t\xa3M\x02\x0e\xdb@\xdbV\rV'
+Hash(Previous Transaction): b'\xe8\x00\xda\xea!%\x95\xd3?\xaeA-\xde\xe0\x85\xf9\xbd\xbcr\x0c\xb7\t\xa3M\x02\x0e\xdb@\xdbV\rV'
+Amount: 10	Genre: create
+Coins: Coin 	80
+Property of	-1357121350476830314
+Coin 	81
+Property of	-1357121350476830314
+Coin 	82
+Property of	-1357121350476830314
+Coin 	83
+Property of	-1357121350476830314
+Coin 	84
+Property of	-1357121350476830314
+Coin 	85
+Property of	-1357121350476830314
+Coin 	86
+Property of	-1357121350476830314
+Coin 	87
+Property of	-1357121350476830314
+Coin 	88
+Property of	-1357121350476830314
+Coin 	89
+Property of	-1357121350476830314
+--------------------------------------------------
+9. Transaction ID:	b';t\xcd\xb7p\xed~\xea\xf59YZfP\x8bx\\\xc0k+\x9e\x8a\xee\xe6DI!\x00|\xad\x9f"'
+Hash(Previous Transaction): b';t\xcd\xb7p\xed~\xea\xf59YZfP\x8bx\\\xc0k+\x9e\x8a\xee\xe6DI!\x00|\xad\x9f"'
+Amount: 10	Genre: create
+Coins: Coin 	90
+Property of	-1357121350476830314
+Coin 	91
+Property of	-1357121350476830314
+Coin 	92
+Property of	-1357121350476830314
+Coin 	93
+Property of	-1357121350476830314
+Coin 	94
+Property of	-1357121350476830314
+Coin 	95
+Property of	-1357121350476830314
+Coin 	96
+Property of	-1357121350476830314
+Coin 	97
+Property of	-1357121350476830314
+Coin 	98
+Property of	-1357121350476830314
+Coin 	99
+Property of	-1357121350476830314
+--------------------------------------------------
+
+================================================================================
+
+User:		134907396530
+Received:	10 coin(s)
+
+User:		134907602619
+Received:	10 coin(s)
+
+User:		134907602649
+Received:	10 coin(s)
+
+User:		134907602679
+Received:	10 coin(s)
+
+User:		134907603225
+Received:	10 coin(s)
+
+User:		134907603255
+Received:	10 coin(s)
+
+User:		134907603285
+Received:	10 coin(s)
+
+User:		134907603315
+Received:	10 coin(s)
+
+User:		134907603345
+Received:	10 coin(s)
+
+User:		134907603375
+Received:	10 coin(s)
+
+********************
+Transaction Created
+From:	134907602619
+To:	134907602679
+********************
+********************
+Transaction Created
+From:	134907603255
+To:	134907603285
+********************
+********************
+Transaction Created
+From:	134907603285
+To:	134907602649
+********************
+********************
+Transaction Aborted
+Self Transfer is not Allowed
+From:	134907602619
+To:	134907602619
+********************
+********************
+Transaction Created
+From:	134907602619
+To:	134907602649
+********************

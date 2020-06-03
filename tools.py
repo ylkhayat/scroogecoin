@@ -1,10 +1,11 @@
 from cryptography.hazmat.backends import default_backend
-from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives import hashes, serialization
 
 from cryptography.hazmat.primitives.asymmetric import dsa, utils
-
+SER_ENCODING = serialization.Encoding.PEM
+SER_FORMAT = serialization.PublicFormat.SubjectPublicKeyInfo
 HASHING = hashes.SHA256()
-HASH_METHOD = hashes.Hash(HASHING, default_backend())
+OUTPUT_PATH = "./output/log.txt"
 
 # Method responsible for both `private_key` and `public_key` generation. `key_size` was declared 1024 for basic key strength.
 def gen_keys():
@@ -13,7 +14,7 @@ def gen_keys():
         backend=default_backend()
     )
     public_key = private_key.public_key()
-    return public_key, private_key 
+    return private_key, public_key  
 
 # Method responsible for signing a certain content with the private key according to the declared hashing_method.
 def sign(private_key, digest):
@@ -29,7 +30,14 @@ def verify(public_key, signature, data):
 
 # Method responsible for hashing the stringified object.
 def get_hash(obj):
+    HASH_METHOD = hashes.Hash(HASHING, default_backend())
     HASH_METHOD.update(str(obj).encode('utf-8'))
     return HASH_METHOD.finalize()
+
+
+def logger(*value):
+    print(*value, sep="")
+    with open(OUTPUT_PATH, 'a') as f:
+        print(*value, file=f)
 
 
