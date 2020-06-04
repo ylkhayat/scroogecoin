@@ -23,10 +23,10 @@ class Scrooge():
         verified_check = self.verify_transaction(transaction, sender_pubk)
         double_spending_check = self.is_double_spending(transaction)
         if not verified_check:
-            logger('|TRANSACTION REJECTED\t-\tInvalid Transaction|\n')
+            logger('|TRANSACTION REJECTED\t-\tInvalid Transaction|')
             return
         if double_spending_check:
-            logger('|TRANSACTION REJECTED\t-\tDouble Spending Detected|\n')
+            logger('|TRANSACTION REJECTED\t-\tDouble Spending Detected|')
             return
         transaction.add_prev_transaction(self.last_transaction)
         self.last_transaction = transaction.hash_val

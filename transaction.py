@@ -26,6 +26,6 @@ class Transaction():
     def str_coins(self):
         return "".join(map(str, self.coins)) if isinstance(self.coins, list) else str(self.coins)
     def __str__(self):
-        return 'Transaction ID:\t'+str(self.hash_val)+'\nHash(Previous Transaction): ' + str(self.previous_transaction_hash) + '\nAmount: '+ self.str_amount() + '\tGenre: '+ self.genre + '\nCoins: ' + self.str_coins()
+        return 'Transaction ID:\t'+str(self.hash_val)+'\nHash(Previous Transaction): ' + str(self.previous_transaction_hash) + '\nAmount: '+ self.str_amount() + '\tGenre: '+ self.genre + '\nCoins:\n' + self.str_coins()
 
         

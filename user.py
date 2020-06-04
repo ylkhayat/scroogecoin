@@ -11,7 +11,7 @@ class User():
     def create_transaction(self, receiver, scrooge):
         list_coins = self.balance(scrooge)
         if(receiver.public_key == self.public_key):
-            logger('*'*20 + '\nTransaction Aborted\nSelf Transfer is not Allowed\nFrom:\t' + str(self.id.__hash__()) + '\nTo:\t' + str(receiver.id.__hash__())+'\n'+'*'*20)
+            logger('*'*20 + '\nTransaction [Aborted]\nSelf Transfer is not Allowed\nFrom:\t' + str(self.id.__hash__()) + '\nTo:\t' + str(receiver.id.__hash__())+'\n'+'*'*20)
             return
         if len(list_coins) == 0:
             logger('|TRANSACTION REJECTED\t-\tInsuficient Balance|')
@@ -21,7 +21,7 @@ class User():
         transfer_coin = list_coins[transfer_coin_index]
         transaction = Transaction(self.public_key, [transfer_coin], receiver.public_key)
         if self.__sign( transaction):
-            logger('*'*20 + '\nTransaction Created\nFrom:\t' + str(self.id.__hash__()) + '\nTo:\t' + str(receiver.id.__hash__())+'\n'+'*'*20)
+            logger('*'*20 + '\nTransaction [Created]\nFrom:\t' + str(self.id.__hash__()) + '\nTo:\t' + str(receiver.id.__hash__())+'\n'+'*'*20)
             scrooge.process_transaction(transaction, self.public_key)
 
     def add_transaction(self, coins):

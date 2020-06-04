@@ -5,10 +5,10 @@ from tools import OUTPUT_PATH
 import keyboard
 import random
 import time
+
 from os import _exit
 
 NUMBER_OF_WALLETS = 10
-
 
 
 if __name__ == '__main__':
