@@ -11,7 +11,7 @@ class BlockChain():
 
     def add_block(self, block):
         self.blocks.append(block)
-        logger('\n' + '='*55 + '\nBlockChain Augmented\n' + '='*55 +'\n'+ str(self) +'='*80+'\n')
+        logger('\n' + '='*64 + '\n\t\t\t\tNEW BLOCK PUBLISHED\t\t\t\n' + '='*64 +'\n'+ str(self) +'='*64+'\n')
 
     def get_balance(self, pubk):
         saved_coins = []
@@ -27,6 +27,6 @@ class BlockChain():
     def __str__(self):
         separator = '\n'
         string = 'BlockChain Content: \n' + separator
-        for block in self.blocks:
-            string += str(block) + separator
+        for ind, block in enumerate(self.blocks):
+            string += '\n' + '=' * 28 + 'Block ' + str(ind) +'=' * 28+'\n'+ str(block)
         return string

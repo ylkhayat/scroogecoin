@@ -1,6 +1,6 @@
 from scrooge import Scrooge
 from user import User
-from tools import OUTPUT_PATH
+from tools import OUTPUT_PATH, logger
 
 import keyboard
 import random
@@ -15,12 +15,15 @@ if __name__ == '__main__':
 
     open(OUTPUT_PATH, 'w').close()
 
-    wallets = [User() for _ in range(NUMBER_OF_WALLETS)]
-    scrooge = Scrooge(wallets)
+    users = [User() for _ in range(NUMBER_OF_WALLETS)]
+    scrooge = Scrooge(users)
 
     def on_space_press(_):
-        print("Wrap up!")
+        logger("Wrap up! Check your `./output/log.txt` file for logs.")
+        scrooge.sign_last_block()
+        # logger('\nLast block successfully signed:\t'+scrooge.current_building_block.signature)
         _exit(0)
+
 
     keyboard.on_press_key("space", on_space_press)
 
@@ -28,6 +31,7 @@ if __name__ == '__main__':
         sender = random.randint(0, NUMBER_OF_WALLETS - 1)
         receiver = random.randint(0, NUMBER_OF_WALLETS - 1)
         
-        wallets[sender].create_transaction(
-            wallets[receiver], scrooge)
-        time.sleep(2)
+        users[sender].create_transaction(
+            users[receiver], scrooge)
+    
+        time.sleep(0.2)

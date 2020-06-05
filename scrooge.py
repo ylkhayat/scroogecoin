@@ -26,7 +26,7 @@ class Scrooge():
             logger('|TRANSACTION REJECTED\t-\tInvalid Transaction|')
             return
         if double_spending_check:
-            logger('|TRANSACTION REJECTED\t-\tDouble Spending Detected|')
+            logger('|TRANSACTION REJECTED\t-\tDouble Spending Detected|\n|From User \t\t\t\t'+str(sender_pubk.__hash__())+'|')
             return
         transaction.add_prev_transaction(self.last_transaction)
         self.last_transaction = transaction.hash_val
@@ -37,16 +37,22 @@ class Scrooge():
         return [Coin(user_id) for _ in range(amount)]
 
     def init(self):
+        self.log_users()
         self.last_transaction = None
         for user in self.users:
             user_id = user.id
             coins = self.create_coins(10, 'scrooge')
             transaction = Transaction(
                 self.public_key, coins, user_id, genre="create", previous_transaction_hash=self.last_transaction)
-            transaction.add_prev_transaction(self.last_transaction)
             if self.__sign(transaction):
-                self.last_transaction = transaction.hash_val
                 self.process_transaction(transaction, self.public_key)
+    
+    def log_users(self):
+        logger('='*64+'\nUsers Report:\n'+'='*64)
+        string_users = ''
+        for user in self.users:
+            string_users += user.to_string(self)
+        logger(string_users+'\n'+'='*64)
     
     def add_coin_to_user(self, transaction):
         receiver_pubk = transaction.receiver
@@ -63,9 +69,11 @@ class Scrooge():
         
     def publish_block(self, block):
         self.blockchain.add_block(block)
-        self.current_building_block = Block(transactions=[], hash_prev_block=self.last_block)
+        self.current_building_block = Block(transactions=[], hash_prev_block=self.last_block.id)
         for transaction in block.transactions:
             self.add_coin_to_user(transaction)
+        self.log_users()
+
 
 
     def verify_transaction(self, transaction, sender_pk):
@@ -73,14 +81,26 @@ class Scrooge():
 
     def is_double_spending(self, transaction):
         return self.current_building_block.is_double_spending(transaction)
-        
-    def __sign(self, transaction):
-        try:
-            transaction_content = get_hash(transaction)
-            signature = sign(self.__private_key, transaction_content)
-            transaction.add_signing(signature)
-            transaction.add_hash(transaction_content)
-            return True
-        except:
-            return False
+    
+    def sign_last_block(self):
+        self.__sign(self.current_building_block)
+
+    def __sign(self, obj):
+        if(isinstance(obj, Transaction)):
+            try:
+                transaction_content = get_hash(obj)
+                signature = sign(self.__private_key, transaction_content)
+                obj.add_signing(signature)
+                obj.add_hash(transaction_content)
+                return True
+            except:
+                return False
+        else:
+            try:
+                block_content = get_hash(obj)
+                signature = sign(self.__private_key, block_content)
+                obj.add_signing(signature)
+                return True
+            except:
+                return False
 

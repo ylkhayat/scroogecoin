@@ -21,7 +21,7 @@ class User():
         transfer_coin = list_coins[transfer_coin_index]
         transaction = Transaction(self.public_key, [transfer_coin], receiver.public_key)
         if self.__sign( transaction):
-            logger('*'*20 + '\nTransaction [Created]\nFrom:\t' + str(self.id.__hash__()) + '\nTo:\t' + str(receiver.id.__hash__())+'\n'+'*'*20)
+            logger('*'*22 + '\nTransaction [Created]\nFrom:\t' + str(self.id.__hash__()) + '\nTo:\t' + str(receiver.id.__hash__())+'\n'+'*'*22)
             scrooge.process_transaction(transaction, self.public_key)
 
     def add_transaction(self, coins):
@@ -42,3 +42,6 @@ class User():
             return True
         except:
             return False
+
+    def to_string(self, scrooge):
+        return 'User ID:\t' + str(self.id.__hash__()) + '\nBalance:\t' + str(len(self.balance(scrooge)))+' coin(s)\n'
