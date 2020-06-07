@@ -24,6 +24,14 @@ class BlockChain():
             saved_coins.remove(out_coin)
         return saved_coins
 
+    def retrieve_coin_previous_transaction(self, coin):
+        previous_hash = None
+        for block in reversed(self.blocks):
+            previous_hash = block.retrieve_coin_previous_transaction(coin)
+            if previous_hash != None:
+                return previous_hash
+        return previous_hash
+
     def __str__(self):
         separator = '\n'
         string = 'BlockChain Content: \n' + separator

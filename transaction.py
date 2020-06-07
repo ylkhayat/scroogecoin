@@ -24,6 +24,11 @@ class Transaction():
     def add_prev_transaction(self, prev_transaction):
         self.previous_transaction_hash = prev_transaction
 
+    def has_coin(self, coin):
+        for transaction_coin in self.coins:
+            if transaction_coin.id == coin.id:
+                return True
+        return False
 
     def str_coins(self):
         return "".join(map(str, self.coins)) if isinstance(self.coins, list) else str(self.coins)

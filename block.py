@@ -36,6 +36,12 @@ class Block():
     def add_signing(self, signature_val):
         self.signature = signature_val
 
+    def retrieve_coin_previous_transaction(self, coin):
+        for transaction in self.transactions:
+            if transaction.has_coin(coin):
+                return transaction.hash_val
+        return None
+
 
     def get_balance(self, pubk):
         in_coins = []

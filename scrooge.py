@@ -15,7 +15,6 @@ class Scrooge():
         self.blockchain = BlockChain()
         self.users = users
         self.current_building_block = Block()
-        self.last_transaction = None
         self.last_block = None
         self.init()
 
@@ -28,22 +27,32 @@ class Scrooge():
         if double_spending_check:
             logger('|TRANSACTION REJECTED\t-\tDouble Spending Detected|\n|From User \t\t\t\t'+str(sender_pubk.__hash__())+'|')
             return
-        transaction.add_prev_transaction(self.last_transaction)
-        self.last_transaction = transaction.hash_val
+        transaction_previous_hash = self.retrieve_transaction_previous_hash(transaction)
+        transaction.add_prev_transaction(transaction_previous_hash)
         self.add_transaction_to_block(transaction)
 
+    def retrieve_transaction_previous_hash(self, transaction):
+        previous_hashes = []
+        for coin in transaction.coins:
+            previous_hash = self.blockchain.retrieve_coin_previous_transaction(coin)
+            if previous_hash != None:
+                previous_hashes.append(previous_hash) 
+        if len(previous_hashes) == 0:
+            previous_hashes = None  
+        elif len(previous_hashes) <= 1:
+            previous_hashes = previous_hashes[0]      
+        return previous_hashes
 
     def create_coins(self, amount, user_id):
         return [Coin(user_id) for _ in range(amount)]
 
     def init(self):
         self.log_users()
-        self.last_transaction = None
+        # self.last_transaction = None
         for user in self.users:
             user_id = user.id
             coins = self.create_coins(10, 'scrooge')
-            transaction = Transaction(
-                self.public_key, coins, user_id, genre="create", previous_transaction_hash=self.last_transaction)
+            transaction = Transaction(self.public_key, coins, user_id, genre="create")
             if self.__sign(transaction):
                 self.process_transaction(transaction, self.public_key)
     
